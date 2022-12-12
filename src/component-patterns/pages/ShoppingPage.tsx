@@ -17,7 +17,13 @@ export const ShoppingPage = () => {
               flexDirection: 'row',
               flexWrap: 'wrap'
           }}>
-            <ProductCard product={ product }/>
+              {/* TODO la idea es enviar los datos desde el padre y que de ahi se repartar a cada componente*/}
+
+            <ProductCard product={ product }>
+                <ProductCard.Image />
+                <ProductCard.Title />
+                <ProductCard.Buttons />
+            </ProductCard>
           </div>
       </div>
   )
