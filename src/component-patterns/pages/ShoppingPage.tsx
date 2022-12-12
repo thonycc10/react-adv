@@ -1,4 +1,4 @@
-import {ProductCard} from "../components/ProductCard";
+import {ProductCard} from "../components/index";
 
 const product = {
     id: '1',
@@ -20,9 +20,9 @@ export const ShoppingPage = () => {
               {/* TODO la idea es enviar los datos desde el padre y que de ahi se repartar a cada componente*/}
 
             <ProductCard product={ product }>
-                <ProductCard.Image />
+                <ProductCard.Imagen />
                 <ProductCard.Title />
-                <ProductCard.Buttons />
+                <ProductCard.Button />
             </ProductCard>
           </div>
       </div>
