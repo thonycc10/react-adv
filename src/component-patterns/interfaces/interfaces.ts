@@ -6,8 +6,15 @@ export interface ProductCardProps {
     product: Product;
     // extensible style
     style?: CSSProperties;
-
+    onChange?: (args: onChangeArgs) => void;
+    value?: number;
 }
+
+export interface onChangeArgs {
+    product: Product;
+    count: number;
+}
+
 
 export interface ProductTitleProps {
     className?: string;
@@ -46,5 +53,9 @@ export interface ProductCardHOCProps {
     Title:  (Props: ProductTitleProps) => JSX.Element
     Imagen: (Props: ProductImageProps) => JSX.Element
     Button: (Props: ProductButtonProps) => JSX.Element
+}
+
+export interface ProductInCart extends Product {
+    count: number
 }
 
