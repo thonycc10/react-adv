@@ -31,22 +31,29 @@ export const ShoppingPage = () => {
                                    onChange={(e) => onProductCountChange(e)}
                                    value={shoppingCart[product.id]?.count || 0}
                       >
-                          <ProductCard.Imagen className="custom-image"
-                                              style={{
-                                                  boxShadow: '10px 10px 10px rgba(0,0,0,0.2)'
-                                              }}
-                          />
-                          <ProductCard.Title className="text-white text-bold"
-                                             style={{
-                                                 fontWeight: 'bold'
-                                             }}
-                          />
-                          <ProductCard.Button classNmae="custom-button"
-                                              style={{
-                                                  display: 'flex',
-                                                  justifyContent: 'end'
-                                              }}
-                          />
+                          {
+                              (mensaje) => (
+                                  <>
+                                      <ProductCard.Imagen className="custom-image"
+                                                          style={{
+                                                              boxShadow: '10px 10px 10px rgba(0,0,0,0.2)'
+                                                          }}
+                                      />
+                                      <ProductCard.Title className="text-white text-bold"
+                                                         style={{
+                                                             fontWeight: 'bold'
+                                                         }}
+                                      />
+                                      <ProductCard.Button classNmae="custom-button"
+                                                          style={{
+                                                              display: 'flex',
+                                                              justifyContent: 'end'
+                                                          }}
+                                      />
+                                  </>
+                              )
+                          }
+
                       </ProductCard>
                   ))
               }
@@ -59,24 +66,30 @@ export const ShoppingPage = () => {
                       <ProductCard product={product}
                                    className="bg-darl"
                                    style={{
-                                       backgroundColor: '#70D1F8',
+                                       backgroundColor: '#767f80',
                                        width: '100px'
                                    }}
                                    key={key}
                                    value={product.count}
                                    onChange={(e) => onProductCountChange(e)}
                       >
-                          <ProductCard.Imagen className="custom-image"
-                                              style={{
-                                                  boxShadow: '10px 10px 10px rgba(0,0,0,0.2)'
-                                              }}
-                          />
-                          <ProductCard.Button classNmae="custom-button"
-                                              style={{
-                                                  display: 'flex',
-                                                  justifyContent: 'center'
-                                              }}
-                          />
+                          {
+                              (mensaje) => (
+                                  <>
+                                      <ProductCard.Imagen className="custom-image"
+                                                          style={{
+                                                              boxShadow: '10px 10px 10px rgba(0,0,0,0.2)'
+                                                          }}
+                                      />
+                                      <ProductCard.Button classNmae="custom-button"
+                                                          style={{
+                                                              display: 'flex',
+                                                              justifyContent: 'center'
+                                                          }}
+                                      />
+                                  </>
+                              )
+                          }
                       </ProductCard>
                   ))
               }
